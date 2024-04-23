@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-style: normal;
+  font-size: 16px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  border-radius: 12px;
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 10px 32px;
+  width: fit-content;
+
+  cursor: pointer;
+  transition: background-color 50ms linear;
+
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary);
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .question {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .timeEnd {
+      margin: 0;
+      font-size: 24px;
+      color: var(--red);
+    }
+
+    .timer {
+      font-size: 23px;
+      font-family: monospace;
+    }
+  }
+
+  &__progress {
+    gap: 25px;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    & > div {
+      flex-grow: 1;
+      height: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  &__progress-completed {
+    background-color: var(--done);
+  }
+
+  &__progress-incomplete {
+    background-color: var(--primary-disabled);
+  }
+
+  &__progress-current {
+    background-color: var(--primary);
+  }
+
+  &__question-name {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__form {
+    gap: 16px;
+    display: flex;
+    margin-top: 8px;
+    flex-direction: column;
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 60px;
+    }
+  }
+
+  &__option {
+    label {
+      margin-left: 8px;
+    }
+  }
+
+  &__result {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      margin: 8px 0 0;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      color: var(--primary);
+    }
+
+    .сorrectСount {
+      font-size: 30px;
+      margin-bottom: 24px;
+      font-family: monospace;
+    }
+  }
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  border: 1px solid var(--primary-disabled);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.custom-checkbox {
+  display: none;
+  margin-right: 10px;
+}
+
+.custom-checkbox + label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  display: inline-block;
+}
+
+.custom-checkbox + label:before {
+  content: "";
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  border: 1px solid var(--primary-disabled);
+}
+
+.custom-checkbox:checked + label:before {
+  background-color: var(--primary);
+}
+
+.custom-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px var(--done);
+}
+
+:root {
+  --red: rgb(205, 16, 16);
+  --done: rgb(16, 21, 116);
+  --bg-color: rgb(220 232 255);
+  --primary: rgba(42, 108, 234, 1);
+  --primary-hover: rgba(57, 125, 255, 1);
+  --primary-disabled: rgba(171, 202, 230, 1);
+}

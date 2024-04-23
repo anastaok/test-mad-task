@@ -1,0 +1,34 @@
+{
+  "extends": ["standard-with-typescript"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "padded-blocks": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/semi": "warn",
+    "no-trailing-spaces": "warn",
+    "@typescript-eslint/indent": "warn",
+    "@typescript-eslint/consistent-type-definitions": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/member-delimiter-style": "warn",
+    "@typescript-eslint/space-before-function-paren": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "no-empty-pattern": "warn",
+    "no-multiple-empty-lines": "warn",
+    "@typescript-eslint/object-curly-spacing": "warn",
+    "no-empty": "warn",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/quotes": "off",
+    "multiline-ternary": "warn"
+  }
+}
