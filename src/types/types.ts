@@ -1,8 +1,3 @@
-type TQuestionBase = {
-  id: number;
-  title: string;
-};
-
 type TQuestionRadio = {
   id: number;
   title: string;
